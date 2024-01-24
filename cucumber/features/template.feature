@@ -1,6 +1,6 @@
-Feature: Cookiecutter
+Feature: Bit manipulation
 
-Scenario: It works!
-	Given the template works
-	When the user tries to take half of 2
-    Then the result is 1
+	Scenario: 11010101010101 is 255
+	Given an API consumer is about to ask for the translation of 11010101010101 to a number
+	When the API consumer asks for the translation
+	Then the API consumer should receive 255
