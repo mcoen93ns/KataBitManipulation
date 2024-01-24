@@ -1,7 +1,10 @@
-import { templateFunction } from "../../src/template";
+import { translateBinaryStringToNumber } from "../../src/template";
 
-describe("TemplateFunction should return half of the provided", () => {
-    it("2 -> 1 ", () => {
-        expect(templateFunction(2)).toEqual(1);        
-    });
+describe("The main objective of this app is to translate a given string that contains a binary of a number to a regular number", () => {
+  it("11010101010101 should be translated to 255", () => {
+    const binaryNumber = "11010101010101";
+    const expectedNumber = 255;
+
+    expect(translateBinaryStringToNumber(binaryNumber)).toEqual(expectedNumber);
+  });
 });
