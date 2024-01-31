@@ -18,11 +18,11 @@ defineFeature(feature, (test) => {
     );
 
     when("the API consumer asks for the translation", async () => {
-      const apiResponse = await request(app).post(
+      const apiResponse = await request(app).get(
         `/translateBinaryToNumber?binaryNumber=${binaryNumber}`
       );
 
-      response = apiResponse.body.response;
+      response = apiResponse.body.decimalNumber;
     });
 
     then("the API consumer should receive 255", () => {
